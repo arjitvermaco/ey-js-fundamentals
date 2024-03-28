@@ -148,32 +148,43 @@ console.log(aboutMe)
 const aboutMeObj = {
     firstName: "Arjit",
     lastName: "Verma",
-    age:2024-1991,
-    friends:friends
+    birthYear:1991,
+    friends:friends,
+    calcAge:function(){
+        return 2024 - this.birthYear
+    },
+    getSummary:function(){
+        return(`Hey! I am ${this.firstName} ${this.lastName}. A am ${this.calcAge()} years old trainer.`)
+    }
 }
 
 console.log(aboutMeObj)
 
+const userAge = aboutMeObj.calcAge()
+console.log(userAge)
+
+console.log(aboutMeObj.getSummary())
+
 //To access value in object
 // 1. Using dot notation 
-console.log(aboutMeObj.firstName)
-console.log(aboutMeObj.friends)
+// console.log(aboutMeObj.firstName)
+// console.log(aboutMeObj.friends)
 
 
-let nameKey = "Name"
+// let nameKey = "Name"
 
-//Bracket notation
-console.log(aboutMeObj['age'])
-console.log(aboutMeObj['lastName'])
+// //Bracket notation
+// console.log(aboutMeObj['age'])
+// console.log(aboutMeObj['lastName'])
 
-console.log(aboutMeObj['first'+nameKey])
-console.log(aboutMeObj.first+nameKey)
-
-
-aboutMeObj.canDrive = true;
-
-aboutMeObj.job = "Developer"
-aboutMeObj['job'] = "Trainer"
+// console.log(aboutMeObj['first'+nameKey])
+// console.log(aboutMeObj.first+nameKey)
 
 
-console.log(aboutMeObj)
+// aboutMeObj.canDrive = true;
+
+// aboutMeObj.job = "Developer"
+// aboutMeObj['job'] = "Trainer"
+
+
+// console.log(aboutMeObj)
