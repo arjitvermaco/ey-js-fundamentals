@@ -103,7 +103,7 @@ console.log(aboutMe[aboutMe.length - 1][2])
 const friends = ["Ankit", "Akash", "jatin", "Justin"]
 
 let newLength = friends.push("Ravi");
-console.log("New length of friends array is",newLength)
+console.log("New length of friends array is", newLength)
 console.log(friends)
 
 //Array.pop
@@ -135,7 +135,7 @@ console.log(friends.indexOf("Satyam"))
 console.log(friends.includes("jatin"))
 console.log(friends.includes("Jitendra"))
 
-if(friends.includes("Ankit")){
+if (friends.includes("Ankit")) {
     console.log("You have a friend called Ankit")
 }
 
@@ -148,13 +148,13 @@ console.log(aboutMe)
 const aboutMeObj = {
     firstName: "Arjit",
     lastName: "Verma",
-    birthYear:1991,
-    friends:friends,
-    calcAge:function(){
+    birthYear: 1991,
+    friends: friends,
+    calcAge: function () {
         return 2024 - this.birthYear
     },
-    getSummary:function(){
-        return(`Hey! I am ${this.firstName} ${this.lastName}. A am ${this.calcAge()} years old trainer.`)
+    getSummary: function () {
+        return (`Hey! I am ${this.firstName} ${this.lastName}. A am ${this.calcAge()} years old trainer.`)
     }
 }
 
@@ -188,3 +188,86 @@ console.log(aboutMeObj.getSummary())
 
 
 // console.log(aboutMeObj)
+
+const mark = {
+    fullName: "mark Smith",
+    mass: 78,
+    height: 1.66,
+    calcBmi: function () {
+        this.bmi = this.mass / this.height ** 2;
+        return this.bmi
+    }
+}
+
+
+
+
+
+console.log(mark.calcBmi())
+
+//Loops
+// console.log('Lifting weights repetition 1 🏋️‍♀️');
+// console.log('Lifting weights repetition 2 🏋️‍♀️');
+// console.log('Lifting weights repetition 3 🏋️‍♀️');
+// console.log('Lifting weights repetition 4 🏋️‍♀️');
+// console.log('Lifting weights repetition 5 🏋️‍♀️');
+// console.log('Lifting weights repetition 6 🏋️‍♀️');
+// console.log('Lifting weights repetition 7 🏋️‍♀️');
+// console.log('Lifting weights repetition 8 🏋️‍♀️');
+// console.log('Lifting weights repetition 9 🏋️‍♀️');
+// console.log('Lifting weights repetition 10 🏋️‍♀️');
+
+
+//For Loop
+for (let rep = 1; rep <= 15; rep++) {
+    console.log(`Lifting weights rep ${rep} 🏋️‍♀️`)
+}
+//
+
+// let students = ["John Doe", "mark", "Ketan", "Rishabh", "Abhi"]
+
+for (let i = 0; i < students.length; i++) {
+    console.log(`${i + 1} students: ${students[i]}`)
+}
+
+
+const years = [1991, 2007, 1969, 2020];
+const ages = []
+
+for (let i = 0; i < years.length; i++) {
+    ages.push(2024 - years[i])
+}
+
+for (let i = years.length - 1; i >= 0; i--) {
+    console.log(years[i])
+}
+
+console.log(ages)
+
+console.log("Loop has ended")
+
+let numbers = [1,2,3,4,5,6,7,8,9,10]
+
+for(let i=0;i<numbers.length;i++){
+    console.log(numbers[i])
+
+    if(numbers[i] === 5) break;
+}
+
+console.log(11/2)
+console.log(10%2)
+
+
+for(let i=0;i<numbers.length;i++){
+    if(numbers[i]%2){
+        continue
+    }
+    console.log(numbers[i])
+}
+
+// while loop 
+let rep =1;
+while(rep<=10){
+    console.log(`Lifting weights rep ${rep} 🏋️‍♀️`)
+    rep++
+}
